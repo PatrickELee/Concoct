@@ -31,7 +31,7 @@
 
     margin: auto;
     margin-top: 20px;
-    width: 150px;
+    width: 100px;
     text-align: center;
     background-color: #1f2232;
     color: #fde8e9;
@@ -41,4 +41,15 @@
 
 input[type="file"] {
     display: none;
+}
+
+.submitButton {
+    padding: 8px 16px;
+    background-color: #fde8e9;
+    color: #1f2232;
+    border: 1px solid #fde8e9;
+    border-radius: 4px;
+
+    margin: auto;
+    cursor: pointer;
 }
