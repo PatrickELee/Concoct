@@ -1,0 +1,43 @@
+.fileFormContainer {
+    display: block;
+    width: 800px;
+    background-color: white;
+    margin: auto;
+    padding: 50px;;
+}
+
+.uploadCaption {
+    display: block;
+    width: 500px;
+    margin: auto;
+
+    font-size: 24px;
+    text-align: center;
+}
+
+.fileFormContainer input {
+    display: block;
+    width: 300px;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.custom-file-upload {
+    border: 1px solid #ccc;
+    display: block;
+    padding: 6px 12px;
+    cursor: pointer;
+
+    margin: auto;
+    margin-top: 20px;
+    width: 150px;
+    text-align: center;
+    background-color: #1f2232;
+    color: #fde8e9;
+    border: 1px solid #1f2232;
+    border-radius: 4px;
+}
+
+input[type="file"] {
+    display: none;
+}
