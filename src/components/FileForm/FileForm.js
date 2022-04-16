@@ -18,9 +18,11 @@ class ImagePreview extends Component {
 
 export default class FileForm extends Component {
 
+
 	constructor(props) {
 		super(props);
 		this.state = {file: 'null'};
+		this.picture = 'null'
 
 		this.handleChange = this.handleChange.bind(this);
 		this.handleSubmit = this.handleSubmit.bind(this);
@@ -28,10 +30,23 @@ export default class FileForm extends Component {
 
 	handleChange(event) {
 		this.setState({file: URL.createObjectURL(event.target.files[0])});
+		this.picture = event.target.files[0];
 	}
 
 	handleSubmit(event) {
 		event.preventDefault();
+		console.log(this.picture);
+
+		const formData = new FormData();
+
+		formData.append("file", this.picture);
+		const requestOptions = {
+			method: 'POST',
+			body: formData
+		};
+
+		fetch('/upload', requestOptions)
+			.then(response => response.json())
 	}
 
 	render() {
