@@ -40,9 +40,10 @@
     margin-top: 20px;
     width: 100px;
     text-align: center;
-    background-color: #1f2232;
-    color: #fde8e9;
-    border: 1px solid #1f2232;
+    
+    background-color: #fde8e9;
+    color: #1f2232;
+    border: 1px solid #fde8e9;
     border-radius: 4px;
 }
 
@@ -51,12 +52,17 @@ input[type="file"] {
 }
 
 .submitButton {
-    padding: 8px 16px;
-    background-color: #fde8e9;
-    color: #1f2232;
-    border: 1px solid #fde8e9;
+    padding: 8px 8px;
+    background-color: #1f2232;
+    color: #fde8e9;
+    border: 1px solid #1f2232;
     border-radius: 4px;
 
+    display: block;
+    width: 150px;
     margin: auto;
+    margin-top: 20px;
     cursor: pointer;
+
+    font-size: 18px;
 }

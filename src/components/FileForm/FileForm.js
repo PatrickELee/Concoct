@@ -1,6 +1,21 @@
 import React, { Component } from "react";
 import "./FileForm.css";
 
+class ImagePreview extends Component {
+	render() {
+		if (this.props.src === 'null') {
+			return (
+				<label for="avatar" class="uploadCaption">Upload a photo of your ingredients</label>
+			);
+		}
+		else {
+			return (
+				<img src={this.props.src} />
+			);
+		}
+	}
+}
+
 export default class FileForm extends Component {
 
 	constructor(props) {
@@ -22,9 +37,8 @@ export default class FileForm extends Component {
 	render() {
 		return (
 			<div class="fileFormContainer">
-				<img src={this.state.file}/>
 				<form>
-					<label for="avatar" class="uploadCaption">Upload a photo of your ingredients</label>
+					<ImagePreview src={this.state.file} />
 					<label class="custom-file-upload">
 					<input 
 						type="file"
