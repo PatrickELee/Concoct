@@ -5,14 +5,14 @@ export default class FileForm extends Component {
 
 	constructor(props) {
 		super(props);
-		this.state = {value: ''};
+		this.state = {file: 'null'};
 
 		this.handleChange = this.handleChange.bind(this);
 		this.handleSubmit = this.handleSubmit.bind(this);
 	}
 
 	handleChange(event) {
-		this.setState({value: event.target.value});
+		this.setState({file: URL.createObjectURL(event.target.files[0])});
 	}
 
 	handleSubmit(event) {
@@ -22,6 +22,7 @@ export default class FileForm extends Component {
 	render() {
 		return (
 			<div class="fileFormContainer">
+				<img src={this.state.file}/>
 				<form>
 					<label for="avatar" class="uploadCaption">Upload a photo of your ingredients</label>
 					<label class="custom-file-upload">

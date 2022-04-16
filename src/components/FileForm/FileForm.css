@@ -7,6 +7,13 @@
     padding: 50px;
 }
 
+.fileFormContainer img {
+    display: block;
+    max-width: 400px;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
 .uploadCaption {
     display: block;
     width: 500px;
