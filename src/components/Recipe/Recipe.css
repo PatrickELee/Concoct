@@ -1,0 +1,11 @@
+.recipeContainer h3 {
+    text-align: center;
+}
+
+.recipeContainer li {
+    display: block;
+    width: 500px;
+    max-width: 500px;
+    margin-left: 110px;
+    text-align: center;
+}

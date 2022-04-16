@@ -1,9 +1,10 @@
 .fileFormContainer {
     display: block;
     width: 800px;
+    max-width: 80%;
     background-color: white;
     margin: auto;
-    padding: 50px;;
+    padding: 50px;
 }
 
 .uploadCaption {

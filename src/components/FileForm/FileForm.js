@@ -6,7 +6,7 @@ export default class FileForm extends Component {
   render() {
   	return (
       <div class="fileFormContainer">
-        <label for="avatar" class="uploadCaption">Upload an photo of your ingredients</label>
+        <label for="avatar" class="uploadCaption">Upload a photo of your ingredients</label>
 					<label class="custom-file-upload">
 						<input 
 							type="file"

@@ -1,10 +1,19 @@
-.appContainer {
+.bodyContainer {
   display: block;
+  display: block;
+  width: 800px;
+  max-width: 80%;
+  background-color: white;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 150px;
+  padding: 50px;
 }
 
 h1.title {
   text-align: center;
   font-size: 48px;
+  font-family: "Inter";
   margin-top: 75px;
   color: #1f2232;
 }

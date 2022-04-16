@@ -1,0 +1,11 @@
+.ingredientsContainer h2 {
+    margin-top: 32px;
+    font-size: 32px;
+    text-align: center;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    text-align: center;
+}
