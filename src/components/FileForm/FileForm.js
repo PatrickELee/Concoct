@@ -3,6 +3,18 @@ import "./FileForm.css";
 
 export default class FileForm extends Component {
 
+	constructor(props) {
+    super(props);
+    this.state = {value: ''};
+
+    this.handleChange = this.handleChange.bind(this);
+    //this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+	handleChange(event) {
+		this.setState({value: event.target.value});
+	}
+
   render() {
   	return (
       <div class="fileFormContainer">
@@ -14,6 +26,7 @@ export default class FileForm extends Component {
 						id="photo" 
 						name="photo"
 						accept="image/png, image/jpeg"
+						onChange={this.handleChange}
 					/>
 						Choose File
 				</label>
