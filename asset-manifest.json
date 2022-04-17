@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/HackDavis2022/static/css/main.041b74ed.css",
+    "main.js": "/HackDavis2022/static/js/main.71acb4eb.js",
+    "static/js/787.28cb0dcd.chunk.js": "/HackDavis2022/static/js/787.28cb0dcd.chunk.js",
+    "static/media/large-wallpaper.jpg": "/HackDavis2022/static/media/large-wallpaper.6e3298a6377b2e6c1167.jpg",
+    "static/media/spaghetti.jpeg": "/HackDavis2022/static/media/spaghetti.ff8e54a025dce01a4fe6.jpeg",
+    "static/media/inter-all-400-normal.woff": "/HackDavis2022/static/media/inter-all-400-normal.e71ac35377dd87cb4d4b.woff",
+    "static/media/inter-latin-ext-400-normal.woff2": "/HackDavis2022/static/media/inter-latin-ext-400-normal.325ea6d33179f07ec7db.woff2",
+    "static/media/inter-latin-400-normal.woff2": "/HackDavis2022/static/media/inter-latin-400-normal.c96fe5ff771f9e7b53ab.woff2",
+    "static/media/inter-cyrillic-ext-400-normal.woff2": "/HackDavis2022/static/media/inter-cyrillic-ext-400-normal.4543e27a05aa2ba75c44.woff2",
+    "static/media/inter-greek-400-normal.woff2": "/HackDavis2022/static/media/inter-greek-400-normal.94fd6d5b2b3cd70f2516.woff2",
+    "static/media/inter-cyrillic-400-normal.woff2": "/HackDavis2022/static/media/inter-cyrillic-400-normal.514f4123b1effd5ed0d8.woff2",
+    "static/media/inter-greek-ext-400-normal.woff2": "/HackDavis2022/static/media/inter-greek-ext-400-normal.18e3b17c2aceabafdd3c.woff2",
+    "static/media/inter-vietnamese-400-normal.woff2": "/HackDavis2022/static/media/inter-vietnamese-400-normal.a1bc9a8f426924c5dea8.woff2",
+    "index.html": "/HackDavis2022/index.html",
+    "main.041b74ed.css.map": "/HackDavis2022/static/css/main.041b74ed.css.map",
+    "main.71acb4eb.js.map": "/HackDavis2022/static/js/main.71acb4eb.js.map",
+    "787.28cb0dcd.chunk.js.map": "/HackDavis2022/static/js/787.28cb0dcd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.041b74ed.css",
+    "static/js/main.71acb4eb.js"
+  ]
+}
