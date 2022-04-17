@@ -42,6 +42,7 @@ class Result extends Component {
 					{indices.map(index => (<div>
 						<hr />
 						<Recipe
+						key={results[index].title}
 						name={results[index].title}
 						usedIngredientCount={results[index].usedIngredientCount}
 						usedIngredients={results[index].usedIngredients}

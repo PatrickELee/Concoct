@@ -27,11 +27,17 @@ export default class Recipe extends Component {
             
             <div class="recipeContainer">
                 <h3>{this.props.name}</h3>
-                <img src={this.props.image} />
-                <h4>Ingredients used</h4>
-                {indices.map(index => (<p>{this.props.usedIngredients[index].name}</p>))}
-                <h4>Ingredients needed</h4>
-                {indices2.map(index => (<p>{this.props.missedIngredients[index].name}</p>))}
+                <div class="recipeGrid">
+                    <div>
+                        <img src={this.props.image} />
+                    </div>
+                    <div>
+                        <h4>Ingredients used</h4>
+                        {indices.map(index => (<p>{this.props.usedIngredients[index].name}</p>))}
+                        <h4>Ingredients needed</h4>
+                        {indices2.map(index => (<p>{this.props.missedIngredients[index].name}</p>))}
+                    </div>
+                </div>
                 <br />
             </div>
         );
