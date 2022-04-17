@@ -60,7 +60,7 @@ class UploadAPI(Resource):
 
     return jsonify(return_dict)
 
-app = Flask(__name__)
+app = Flask(__name__, static_url_path='', static_folder='build')
 api = Api(app)
 
 api.add_resource(UploadAPI, '/file/upload')
