@@ -1,20 +1,19 @@
 import './App.css';
 import FileForm from './components/FileForm/FileForm';
 import IngredientsList from './components/IngredientsList/IngredientsList';
-import Recipe from './components/Recipe/Recipe'
-import RecipeList from './components/RecipeList/RecipeList'
+import RecipeList from './components/RecipeList/RecipeList';
 import "@fontsource/inter";
 
 function App() {
   return (
     <>
-      <h1 class="title">Recipe Finder</h1>
+      <h1 class="title">Recipe Finder  
+        <span class="tooltiptext">
+          Recipe Finder uses artificial intelligence to recognize ingredients in the photo you upload to give you recipes that you can make.
+        </span>
+      </h1>
       <div class="bodyContainer">
         <FileForm />
-        <hr />
-        <IngredientsList />
-        <hr />
-        <RecipeList />
       </div>
     </>
   );

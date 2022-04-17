@@ -10,10 +10,31 @@
   padding: 50px;
 }
 
-h1.title {
+.title {
   text-align: center;
   font-size: 48px;
   font-family: "Inter";
   margin-top: 75px;
   color: #1f2232;
+}
+.tooltiptext {
+  visibility: hidden;
+  width: 300px;
+  background-color: black;
+  color: #fff;
+  text-align: left;
+  padding: 5px 10px;
+  border-radius: 6px;
+ 
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+  top: 60px;
+  left: 890px;
+
+  font-size: 16px;
+}
+
+.title:hover .tooltiptext {
+  visibility: visible;
 }

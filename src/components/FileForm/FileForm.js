@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import IngredientsList from '../IngredientsList/IngredientsList';
+import RecipeList from '../RecipeList/RecipeList';
 import "./FileForm.css";
 
 class ImagePreview extends Component {
@@ -16,11 +18,26 @@ class ImagePreview extends Component {
 	}
 }
 
+class Result extends Component {
+	render() {
+		if (this.props.display == 'true') {
+			return (
+				<>
+					<hr />
+					<IngredientsList />
+					<hr />
+					<RecipeList />
+				</>
+			)
+		}
+	}
+}
+
 export default class FileForm extends Component {
 
 	constructor(props) {
 		super(props);
-		this.state = {file: 'null'};
+		this.state = {file: 'null', submitted: 'false'};
 
 		this.handleChange = this.handleChange.bind(this);
 		this.handleSubmit = this.handleSubmit.bind(this);
@@ -31,11 +48,13 @@ export default class FileForm extends Component {
 	}
 
 	handleSubmit(event) {
+		this.setState({submitted: 'true'});
 		event.preventDefault();
 	}
 
 	render() {
 		return (
+		<>
 			<div class="fileFormContainer">
 				<form>
 					<ImagePreview src={this.state.file} />
@@ -52,6 +71,8 @@ export default class FileForm extends Component {
 					<button class="submitButton" onClick={this.handleSubmit}>Find Recipes</button>
 				</form>
 			</div>
+			<Result display={this.state.submitted} />
+		</>
 		);
 	}
 }
