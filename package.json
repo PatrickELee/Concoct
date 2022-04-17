@@ -1,6 +1,6 @@
 {
   "name": "my-app",
-  "homepage" : "https://PatrickELee.github.io/HackDavis2022/",
+  "homepage" : "https://hackdavis2022.herokuapp.com",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

@@ -106,8 +106,7 @@ export default class FileForm extends Component {
 			body: formData
 		};
 		
-		console.log('fetch top')
-		fetch('/upload', requestOptions)
+		fetch('https://hackdavis2022.herokuapp.com/file/upload', requestOptions)
 			.then(response => {return response.json()})
 			.then(responseData => {
 				console.log(responseData);

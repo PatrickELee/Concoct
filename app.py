@@ -1,6 +1,6 @@
 from werkzeug.utils import secure_filename
 from flask_restful import Api, Resource, reqparse
-from flask import Flask, jsonify
+from flask import Flask, jsonify, send_from_directory
 import werkzeug
 import os
 from azure.cognitiveservices.vision.customvision.prediction import CustomVisionPredictionClient
@@ -60,10 +60,14 @@ class UploadAPI(Resource):
 
     return jsonify(return_dict)
 
-app = Flask(__name__)
+app = Flask(__name__, static_url_path='', static_folder='build')
 api = Api(app)
 
-api.add_resource(UploadAPI, '/upload')
+@app.route("/", defaults={'path':''})
+def serve(path):
+    return send_from_directory(app.static_folder,'index.html')
+
+api.add_resource(UploadAPI, '/file/upload')
 
 
 if __name__ == "__main__":
