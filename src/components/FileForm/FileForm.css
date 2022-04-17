@@ -2,7 +2,6 @@
     display: block;
     width: 800px;
     max-width: 80%;
-    background-color: white;
     margin: auto;
     padding: 50px 20px;
 }
@@ -41,9 +40,9 @@
     width: 100px;
     text-align: center;
     
-    background-color: #fde8e9;
-    color: #1f2232;
-    border: 1px solid #fde8e9;
+    background-color: #2e3134 ;
+    color: white;
+    border: 1px solid #2e3134 ;
     border-radius: 4px;
 }
 
@@ -53,9 +52,9 @@ input[type="file"] {
 
 .submitButton {
     padding: 8px 8px;
-    background-color: #1f2232;
-    color: #fde8e9;
-    border: 1px solid #1f2232;
+    background-color: #2e3134;
+    color: white;
+    border: 1px solid #2e3134;
     border-radius: 4px;
 
     display: block;

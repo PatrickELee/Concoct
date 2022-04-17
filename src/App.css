@@ -2,7 +2,9 @@
   display: block;
   width: 800px;
   max-width: 80%;
-  background-color: white;
+  background-color: #2e3134;
+  background: rgba(204, 204, 204, 0.5);
+  backdrop-filter: blur(3px);
   margin: auto;
   margin-top: 50px;
   margin-bottom: 150px;
@@ -13,8 +15,12 @@
   text-align: center;
   font-size: 48px;
   font-family: "Inter";
-  margin-top: 75px;
+  width:300px;
+  margin: auto;
+  margin-top: 100px;
   color: #1f2232;
+  background: rgba(255, 255, 255, 0.8);
+
 }
 .tooltiptext {
   visibility: hidden;
