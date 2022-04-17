@@ -63,7 +63,7 @@ class UploadAPI(Resource):
 app = Flask(__name__)
 api = Api(app)
 
-api.add_resource(UploadAPI, '/upload')
+api.add_resource(UploadAPI, 'https://hackdavis2022.herokuapp.com/flask/upload')
 
 
 if __name__ == "__main__":
