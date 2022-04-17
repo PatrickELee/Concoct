@@ -7,9 +7,9 @@ let results = ["Tomatoes", "Spaghetti noodles", "Water", ""];
 export default class FileForm extends Component {
 
     render() {
-        console.log("num ingredients: " + this.props.usedIngredientCount);
-        console.log(this.props.usedIngredients);
-        console.log(this.props.usedIngredients[0]);
+        // console.log("num ingredients: " + this.props.usedIngredientCount);
+        // console.log(this.props.usedIngredients);
+        // console.log(this.props.usedIngredients[0]);
 
         let indices = [];
         for (let i = 0; i < this.props.usedIngredientCount; i++)

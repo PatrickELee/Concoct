@@ -22,8 +22,8 @@ class ImagePreview extends Component {
 class Result extends Component {
 	render() {
 		let results = this.props.results;
-		let result1 = this.props.results[0];
-		console.log(result1);
+		// let result1 = this.props.results[0];
+		// console.log(result1);
 		
 	/*	console.log(results[0].usedIngredientCount);
 		console.log(results[0].usedIngredients); */
@@ -53,6 +53,7 @@ class Result extends Component {
 							<Recipe
 							key={results[index].title}
 							name={results[index].title}
+							id={results[index].id}
 							usedIngredientCount={results[index].usedIngredientCount}
 							usedIngredients={results[index].usedIngredients}
 							missedIngredientCount={results[index].missedIngredientCount}
@@ -67,7 +68,7 @@ class Result extends Component {
 			else
 			return (
 				<>
-					<h1>nothing</h1>
+					<h1>Loading...</h1>
 					
 					
 				</>
@@ -135,7 +136,7 @@ export default class FileForm extends Component {
 					/>
 						Choose File
 					</label>
-					<button class="submitButton" onClick={this.handleSubmit}>Find Recipes</button>
+					<button class="submitButton" onClick={this.handleSubmit}>Find Recipes!</button>
 					
 				</form>
 			</div>

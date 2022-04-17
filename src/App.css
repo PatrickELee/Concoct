@@ -27,7 +27,8 @@
 }
 .tooltiptext {
   visibility: hidden;
-  width: 300px;
+  width: 33%;
+  max-width: 300px;
   background-color: black;
   color: #fff;
   text-align: left;
@@ -38,8 +39,7 @@
   position: absolute;
   z-index: 1;
   top: 60px;
-  left: 890px;
-
+  left: 40%;
   font-size: 16px;
 }
 
