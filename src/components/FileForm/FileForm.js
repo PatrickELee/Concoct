@@ -40,6 +40,8 @@ class Result extends Component {
 						name={results[0].title}
 						usedIngredientCount={results[0].usedIngredientCount}
 						usedIngredients={results[0].usedIngredients}
+						missedIngredientCount={results[0].missedIngredientCount}
+						missedIngredients={results[0].missedIngredients}
 						image={results[0].image}
 					/>
 				</>

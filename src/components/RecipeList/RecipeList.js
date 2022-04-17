@@ -12,6 +12,8 @@ export default class RecipeList extends Component {
                     name={this.props.names[0]}
                     usedIngredientCount={this.props.usedIngredientCounts[0]}
                     usedIngredients={this.props.usedIngredientsList[0]}
+                    missedIngredientCount={this.props.missedIngredientCounts[0]}
+                    missedIngredients={this.props.missedIngredientsList[0]}
                 />
             </div>
         );

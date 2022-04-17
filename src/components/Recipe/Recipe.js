@@ -18,6 +18,11 @@ export default class Recipe extends Component {
             indices.push(i);
         }
 
+        let indices2 = [];
+        for (let i = 0; i < this.props.missedIngredientCount; i++) {
+            indices2.push(i);
+        }
+
         return (
             
             <div class="recipeContainer">
@@ -25,6 +30,8 @@ export default class Recipe extends Component {
                 <img src={this.props.image} />
                 <h4>Ingredients used</h4>
                 {indices.map(index => (<p>{this.props.usedIngredients[index].name}</p>))}
+                <h4>Ingredients needed</h4>
+                {indices2.map(index => (<p>{this.props.missedIngredients[index].name}</p>))}
             </div>
         );
     }
