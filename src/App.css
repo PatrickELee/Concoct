@@ -7,6 +7,9 @@
   margin-top: 50px;
   margin-bottom: 150px;
   padding: 40px;
+
+  border: 2px solid white;
+  border-radius: 10px;
 }
 
 .title {
