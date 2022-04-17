@@ -22,7 +22,7 @@ export default class Recipe extends Component {
             
             <div class="recipeContainer">
                 <h3>{this.props.name}</h3>
-                <img src={Spaghetti} />
+                <img src={this.props.image} />
                 <h4>Ingredients used</h4>
                 {indices.map(index => (<p>{this.props.usedIngredients[index].name}</p>))}
             </div>

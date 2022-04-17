@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import IngredientsList from '../IngredientsList/IngredientsList';
 import RecipeList from '../RecipeList/RecipeList';
+import Recipe from '../Recipe/Recipe';
 import "./FileForm.css";
-import sampleJSON from "../../sample.json"
 
 class ImagePreview extends Component {
 	render() {
@@ -22,13 +22,26 @@ class ImagePreview extends Component {
 class Result extends Component {
 	render() {
 		let results = this.props.results;
+	/*	console.log('new attempt');
+		console.log(results);
+		console.log(results[0].usedIngredientCount);
+		console.log(results[0].usedIngredients); */
+
 		if (this.props.display == 'true') {
 			return (
 				<>
 					<hr />
-					<IngredientsList />
+					<IngredientsList 
+						usedIngredientCount={results[0].usedIngredientCount}
+						usedIngredients={results[0].usedIngredients}
+					/>
 					<hr />
-					<RecipeList />
+					<Recipe
+						name={results[0].title}
+						usedIngredientCount={results[0].usedIngredientCount}
+						usedIngredients={results[0].usedIngredients}
+						image={results[0].image}
+					/>
 				</>
 			)
 		}
@@ -37,23 +50,9 @@ class Result extends Component {
 
 export default class FileForm extends Component {
 
-	async fetchdata() {
-   /* try {
-      fetch(
-        `https://api.spoonacular.com/recipes/findByIngredients?ingredients=apples,+flour,+sugar&number=2`
-      )
-        .then((res) => res.json())
-        .then((res) => {
-          //return error if code: 402
-          console.log(res.json());
-          setRecipesFound(res.json());
-        });
-    } catch (e) {} */
-	}
-
 	constructor(props) {
 		super(props);
-		this.state = {file: 'null', submitted: 'false', recipesFound: 'null'};
+		this.state = {file: 'null', submitted: 'false', recipesFound: 'null', data: 'null', isLoaded : 'false'};
 		this.picture = 'null'
 
 		this.handleChange = this.handleChange.bind(this);
@@ -80,32 +79,18 @@ export default class FileForm extends Component {
 		};
 
 		fetch('/upload', requestOptions)
-			.then(response => response.json())
+			.then(response => {return response.json()})
+			.then(responseData => {console.log(responseData); return responseData;})
+			.then(mydata => {this.setState({data : mydata, isLoaded : 'true'});})
+			.then(
+				console.log(this.state.data)
+			)
+
 	}
 
+
 	render() {
-		let results = {sampleJSON};/*{
-			"title": "Spaghetti",
-			"unusedIngredients": [],
-			"usedIngredientCount": 2,
-			"usedIngredients": [
-					{
-							"aisle": "Produce",
-							"amount": 6.0,
-							"id": 9003,
-							"image": "https://spoonacular.com/cdn/ingredients_100x100/apple.jpg",
-							"meta": [],
-							"name": "apples",
-							"original": "6 large baking apples",
-							"originalName": "baking apples",
-							"unit": "large",
-							"unitLong": "larges",
-							"unitShort": "large"
-					},
-					{
-						"name": "flour",
-					}
-		]}; */
+		let results = {};
 		
 		return (
 		<>
@@ -123,11 +108,12 @@ export default class FileForm extends Component {
 						Choose File
 					</label>
 					<button class="submitButton" onClick={this.handleSubmit}>Find Recipes</button>
+					
 				</form>
 			</div>
 			<Result
 				display={this.state.submitted}
-				results={results}
+				results={this.state.data}
 			/>
 		</>
 		);
