@@ -26,12 +26,12 @@ class UploadAPI(Resource):
     args = parse.parse_args()
 
     image_file = args['file']
-    image_file.save(os.path.join(app.root_path, 'uploads', secure_filename(image_file.filename)))
+    #image_file.save(os.path.join(app.root_path, 'uploads', secure_filename(image_file.filename)))
 
     prediction_credentials = ApiKeyCredentials(in_headers={"Prediction-key": prediction_key})
     predictor = CustomVisionPredictionClient(endpoint=endpoint,credentials=prediction_credentials)
-    with open(os.path.join (app.root_path, "uploads", image_file.filename), mode="rb") as test_data:
-      results = predictor.classify_image(project_id, 'Food1', test_data)
+    #with open(os.path.join (app.root_path, "uploads", image_file.filename), mode="rb") as test_data:
+    results = predictor.classify_image(project_id, 'Food1', image_file)
 
     return_data = {'image_includes' : []}
     for prediction in results.predictions:
