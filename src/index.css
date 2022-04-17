@@ -9,6 +9,7 @@ body {
   background-color: black;
   background-image: url("large-wallpaper.jpg");
   background-size: cover;
+  background-repeat: no-repeat;
 }
 
 code {
