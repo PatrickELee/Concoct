@@ -23,7 +23,7 @@
   margin-top: 100px;
   color: #1f2232;
   background: rgba(255, 255, 255, 0.8);
-
+  border-radius: 10px;
 }
 .tooltiptext {
   visibility: hidden;

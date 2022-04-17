@@ -12,7 +12,7 @@
     display: block;
     margin: auto;
     max-width: 60%;
-    box-shadow: 3px 2px 2px #CCCCCC;
+    border-radius: 7px;
 }
 
 .recipeContainer h4 {
