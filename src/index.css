@@ -6,7 +6,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  background-color: #E3BAC6;
+  background-color: black;
   background-image: url("large-wallpaper.jpg");
   background-size: cover;
 }
