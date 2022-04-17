@@ -64,11 +64,13 @@ class UploadAPI(Resource):
     }
     r = requests.get(url=URL, headers=headers, params=parameters)
 
+    return_dict = json.loads(r.text)
+    return_dict.append(return_data)
 
     with open("sample.json", "w") as outfile:
       outfile.write(r.text)
 
-    return jsonify(r.json())
+    return jsonify(return_dict)
 
 app = Flask(__name__)
 api = Api(app)
