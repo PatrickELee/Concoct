@@ -28,7 +28,6 @@ class UploadAPI(Resource):
     prediction_credentials = ApiKeyCredentials(in_headers={"Prediction-key": prediction_key})
 
     predictor = CustomVisionPredictionClient(endpoint=endpoint,credentials=prediction_credentials)
-    img = io.imread(image_file)
     print(f'{predictor}\n\n\n\n\n\n')
 
     project_id = "/subscriptions/4d5e5e05-5852-4193-849f-10cac78ecb0a/resourceGroups/HackDavis2022/providers/Microsoft.CognitiveServices/accounts/HackDavis2022-Prediction"#os.environ.get('PROJECT_ID')
@@ -58,7 +57,7 @@ class UploadAPI(Resource):
     parameters = {
       'apiKey' : "cc0f711982ad401aa2d0f2f091bc9162",
       'ingredients' : joined_string,
-      'number' : 1,
+      'number' : 4,
       'limitLicense' : False,
       'ranking' : 2,
       'ignorePantry' : True

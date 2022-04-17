@@ -32,6 +32,7 @@ export default class Recipe extends Component {
                 {indices.map(index => (<p>{this.props.usedIngredients[index].name}</p>))}
                 <h4>Ingredients needed</h4>
                 {indices2.map(index => (<p>{this.props.missedIngredients[index].name}</p>))}
+                <br />
             </div>
         );
     }

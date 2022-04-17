@@ -22,10 +22,14 @@ class ImagePreview extends Component {
 class Result extends Component {
 	render() {
 		let results = this.props.results;
-	/*	console.log('new attempt');
+		console.log('new attempt');
 		console.log(results);
-		console.log(results[0].usedIngredientCount);
+	/*	console.log(results[0].usedIngredientCount);
 		console.log(results[0].usedIngredients); */
+
+		let indices = [];
+		for (let i = 0; i < Math.min(results.length, 4); i++)
+            indices.push(i);
 
 		if (this.props.display == 'true') {
 			return (
@@ -35,15 +39,19 @@ class Result extends Component {
 						usedIngredientCount={results[0].usedIngredientCount}
 						usedIngredients={results[0].usedIngredients}
 					/>
-					<hr />
-					<Recipe
-						name={results[0].title}
-						usedIngredientCount={results[0].usedIngredientCount}
-						usedIngredients={results[0].usedIngredients}
-						missedIngredientCount={results[0].missedIngredientCount}
-						missedIngredients={results[0].missedIngredients}
-						image={results[0].image}
-					/>
+					{indices.map(index => (<div>
+						<hr />
+						<Recipe
+						name={results[index].title}
+						usedIngredientCount={results[index].usedIngredientCount}
+						usedIngredients={results[index].usedIngredients}
+						missedIngredientCount={results[index].missedIngredientCount}
+						missedIngredients={results[index].missedIngredients}
+						image={results[index].image}
+						/>
+					</div>))}
+					
+					
 				</>
 			)
 		}
