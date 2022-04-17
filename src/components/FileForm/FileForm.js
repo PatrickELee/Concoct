@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import IngredientsList from '../IngredientsList/IngredientsList';
 import RecipeList from '../RecipeList/RecipeList';
 import "./FileForm.css";
+import sampleJSON from "../../sample.json"
 
 class ImagePreview extends Component {
 	render() {
@@ -25,9 +26,9 @@ class Result extends Component {
 			return (
 				<>
 					<hr />
-					<IngredientsList results={results}/>
+					<IngredientsList />
 					<hr />
-					<RecipeList results={results}/>
+					<RecipeList />
 				</>
 			)
 		}
@@ -83,7 +84,7 @@ export default class FileForm extends Component {
 	}
 
 	render() {
-		let results = {
+		let results = {sampleJSON};/*{
 			"title": "Spaghetti",
 			"unusedIngredients": [],
 			"usedIngredientCount": 2,
@@ -104,7 +105,7 @@ export default class FileForm extends Component {
 					{
 						"name": "flour",
 					}
-		]};
+		]}; */
 		
 		return (
 		<>
