@@ -34,7 +34,7 @@ export default class Recipe extends Component {
                         <img src={this.props.image} />
                     </div>
                     <div>
-                        <a href={link}/>
+                        <a href={link}>Link</a>
                         <h4>Ingredients used</h4>
                         {indices.map(index => (<p>{this.props.usedIngredients[index].name}</p>))}
                         <h4>Ingredients needed</h4>
