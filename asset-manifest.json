@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/HackDavis2022/static/css/main.041b74ed.css",
+    "main.css": "/HackDavis2022/static/css/main.bad93160.css",
     "main.js": "/HackDavis2022/static/js/main.71acb4eb.js",
     "static/js/787.28cb0dcd.chunk.js": "/HackDavis2022/static/js/787.28cb0dcd.chunk.js",
     "static/media/large-wallpaper.jpg": "/HackDavis2022/static/media/large-wallpaper.6e3298a6377b2e6c1167.jpg",
@@ -14,12 +14,12 @@
     "static/media/inter-greek-ext-400-normal.woff2": "/HackDavis2022/static/media/inter-greek-ext-400-normal.18e3b17c2aceabafdd3c.woff2",
     "static/media/inter-vietnamese-400-normal.woff2": "/HackDavis2022/static/media/inter-vietnamese-400-normal.a1bc9a8f426924c5dea8.woff2",
     "index.html": "/HackDavis2022/index.html",
-    "main.041b74ed.css.map": "/HackDavis2022/static/css/main.041b74ed.css.map",
+    "main.bad93160.css.map": "/HackDavis2022/static/css/main.bad93160.css.map",
     "main.71acb4eb.js.map": "/HackDavis2022/static/js/main.71acb4eb.js.map",
     "787.28cb0dcd.chunk.js.map": "/HackDavis2022/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.041b74ed.css",
+    "static/css/main.bad93160.css",
     "static/js/main.71acb4eb.js"
   ]
 }
