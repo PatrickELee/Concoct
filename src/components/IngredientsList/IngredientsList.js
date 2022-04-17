@@ -7,16 +7,17 @@ let results = ["Tomatoes", "Spaghetti noodles", "Water", ""];
 export default class FileForm extends Component {
 
     render() {
+        let results = this.props.results;
+        
         let indices = [];
-        for (let i = 0; i < results.length; i++)
+        for (let i = 0; i < results.usedIngredientCount; i++)
             indices.push(i);
         
         return (
             <div class="ingredientsContainer">
                 <h2>Ingredients Recognized</h2>
-                <div class="grid-container">
-                    {indices.map(index => (<p>{results[index]}</p>))}
-                </div>
+                {indices.map(index => (<p>{results.usedIngredients[index].name}</p>))}
+                <br />
             </div>
         );
     }

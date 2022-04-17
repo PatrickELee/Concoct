@@ -5,10 +5,12 @@ import Recipe from "../Recipe/Recipe"
 export default class RecipeList extends Component {
 
     render() {
+        let results = this.props.results;
+
         return (
             <div class="recipeListContainer">
                 <h2>Recipes Available</h2>
-                <Recipe name="Spaghetti" />
+                <Recipe results={results} />
             </div>
         );
     }

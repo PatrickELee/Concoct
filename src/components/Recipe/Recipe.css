@@ -3,21 +3,18 @@
     font-size: 22px;
 }
 
-.recipeContainer li {
-    display: block;
-    width: 500px;
-    max-width: 500px;
-    margin-left: 110px;
-    text-align: center;
-}
-
 .recipeContainer img {
     display: block;
     margin: auto;
-    max-width: 400px;
+    max-width: 60%;
 }
 
 .recipeContainer h4 {
     text-align: center;
     text-decoration: underline;
+}
+
+.recipeContainer p  {
+    line-height: 8px;
+    text-align: center;
 }

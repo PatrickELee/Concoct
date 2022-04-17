@@ -20,13 +20,14 @@ class ImagePreview extends Component {
 
 class Result extends Component {
 	render() {
+		let results = this.props.results;
 		if (this.props.display == 'true') {
 			return (
 				<>
 					<hr />
-					<IngredientsList />
+					<IngredientsList results={results}/>
 					<hr />
-					<RecipeList />
+					<RecipeList results={results}/>
 				</>
 			)
 		}
@@ -35,10 +36,23 @@ class Result extends Component {
 
 export default class FileForm extends Component {
 
+	async fetchdata() {
+   /* try {
+      fetch(
+        `https://api.spoonacular.com/recipes/findByIngredients?ingredients=apples,+flour,+sugar&number=2`
+      )
+        .then((res) => res.json())
+        .then((res) => {
+          //return error if code: 402
+          console.log(res.json());
+          setRecipesFound(res.json());
+        });
+    } catch (e) {} */
+	}
 
 	constructor(props) {
 		super(props);
-		this.state = {file: 'null', submitted: 'false'};
+		this.state = {file: 'null', submitted: 'false', recipesFound: 'null'};
 		this.picture = 'null'
 
 		this.handleChange = this.handleChange.bind(this);
@@ -53,7 +67,7 @@ export default class FileForm extends Component {
 	handleSubmit(event) {
 		this.setState({submitted: 'true'});
 		event.preventDefault();
-		
+
 		console.log(this.picture);
 
 		const formData = new FormData();
@@ -69,6 +83,29 @@ export default class FileForm extends Component {
 	}
 
 	render() {
+		let results = {
+			"title": "Spaghetti",
+			"unusedIngredients": [],
+			"usedIngredientCount": 2,
+			"usedIngredients": [
+					{
+							"aisle": "Produce",
+							"amount": 6.0,
+							"id": 9003,
+							"image": "https://spoonacular.com/cdn/ingredients_100x100/apple.jpg",
+							"meta": [],
+							"name": "apples",
+							"original": "6 large baking apples",
+							"originalName": "baking apples",
+							"unit": "large",
+							"unitLong": "larges",
+							"unitShort": "large"
+					},
+					{
+						"name": "flour",
+					}
+		]};
+		
 		return (
 		<>
 			<div class="fileFormContainer">
@@ -87,7 +124,10 @@ export default class FileForm extends Component {
 					<button class="submitButton" onClick={this.handleSubmit}>Find Recipes</button>
 				</form>
 			</div>
-			<Result display={this.state.submitted} />
+			<Result
+				display={this.state.submitted}
+				results={results}
+			/>
 		</>
 		);
 	}

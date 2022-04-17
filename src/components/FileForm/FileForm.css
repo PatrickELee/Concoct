@@ -4,19 +4,21 @@
     max-width: 80%;
     background-color: white;
     margin: auto;
-    padding: 50px;
+    padding-top: 50px;
+    padding-left: 20px;
+    padding-bottom: 50px;
 }
 
 .fileFormContainer img {
     display: block;
-    max-width: 400px;
+    max-width: 60%;
     margin: auto;
     margin-bottom: 20px;
 }
 
 .uploadCaption {
     display: block;
-    width: 500px;
+    width: 60%;
     margin: auto;
 
     font-size: 24px;
