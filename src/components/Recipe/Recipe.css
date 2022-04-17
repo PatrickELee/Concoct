@@ -24,3 +24,10 @@
     line-height: 8px;
     text-align: center;
 }
+
+.recipeContainer a {
+    text-align: center;
+    text-decoration: underline;
+    color: black;
+    font-size: 20px;
+}

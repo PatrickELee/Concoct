@@ -53,6 +53,7 @@ class Result extends Component {
 							<Recipe
 							key={results[index].title}
 							name={results[index].title}
+							id={results[index].id}
 							usedIngredientCount={results[index].usedIngredientCount}
 							usedIngredients={results[index].usedIngredients}
 							missedIngredientCount={results[index].missedIngredientCount}
