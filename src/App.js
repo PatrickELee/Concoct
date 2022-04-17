@@ -9,7 +9,8 @@ import "@fontsource/inter";
 function App() {
   return (
     <>
-      <h1 class="title">Recipe Finder  
+      <h1 class="title">
+        Recipe Finder  
         <span class="tooltiptext">
           Recipe Finder uses artificial intelligence to recognize ingredients in the photo you upload to give you recipes that you can make.
         </span>

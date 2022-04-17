@@ -1,13 +1,12 @@
 .bodyContainer {
   display: block;
-  display: block;
   width: 800px;
   max-width: 80%;
   background-color: white;
   margin: auto;
   margin-top: 50px;
   margin-bottom: 150px;
-  padding: 50px;
+  padding: 40px;
 }
 
 .title {
