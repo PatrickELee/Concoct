@@ -1,5 +1,6 @@
 .recipeContainer h3 {
     text-align: center;
+    font-size: 22px;
 }
 
 .recipeContainer li {
@@ -8,4 +9,15 @@
     max-width: 500px;
     margin-left: 110px;
     text-align: center;
+}
+
+.recipeContainer img {
+    display: block;
+    margin: auto;
+    max-width: 400px;
+}
+
+.recipeContainer h4 {
+    text-align: center;
+    text-decoration: underline;
 }
