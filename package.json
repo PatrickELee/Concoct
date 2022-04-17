@@ -1,6 +1,6 @@
 {
   "name": "my-app",
-  "homepage" : "https://hackdavis2022.herokuapp.com/",
+  "homepage" : "https://hackdavis2022.herokuapp.com",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
