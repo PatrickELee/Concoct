@@ -35,9 +35,11 @@ class Result extends Component {
 
 export default class FileForm extends Component {
 
+
 	constructor(props) {
 		super(props);
 		this.state = {file: 'null', submitted: 'false'};
+		this.picture = 'null'
 
 		this.handleChange = this.handleChange.bind(this);
 		this.handleSubmit = this.handleSubmit.bind(this);
@@ -45,11 +47,25 @@ export default class FileForm extends Component {
 
 	handleChange(event) {
 		this.setState({file: URL.createObjectURL(event.target.files[0])});
+		this.picture = event.target.files[0];
 	}
 
 	handleSubmit(event) {
 		this.setState({submitted: 'true'});
 		event.preventDefault();
+		
+		console.log(this.picture);
+
+		const formData = new FormData();
+
+		formData.append("file", this.picture);
+		const requestOptions = {
+			method: 'POST',
+			body: formData
+		};
+
+		fetch('/upload', requestOptions)
+			.then(response => response.json())
 	}
 
 	render() {
