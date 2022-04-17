@@ -56,7 +56,7 @@ class UploadAPI(Resource):
     r = requests.get(url=URL, headers=headers, params=parameters)
 
     return_dict = json.loads(r.text)
-    return_dict.append(return_data)
+    return_dict.append(return_data['image_includes'])
 
     return jsonify(return_dict)
 

@@ -22,8 +22,9 @@ class ImagePreview extends Component {
 class Result extends Component {
 	render() {
 		let results = this.props.results;
-		console.log('new attempt');
-		console.log(results);
+		let result1 = this.props.results[0];
+		console.log(result1);
+		
 	/*	console.log(results[0].usedIngredientCount);
 		console.log(results[0].usedIngredients); */
 
@@ -32,29 +33,45 @@ class Result extends Component {
             indices.push(i);
 
 		if (this.props.display == 'true') {
+		/*	if (results[4] != null) {
+				console.log(results[4]);
+				//if (results[4] != null)
+					console.log(results[4][0]);
+				console.log(Object.keys(results[4]).length);
+			}*/
+
+			if (results[4] != null)
+				return (
+					<>
+						<hr />
+						<IngredientsList 
+							usedIngredientCount={Object.keys(results[4]).length}
+							usedIngredients={results[4]}
+						/>
+						{indices.map(index => (<div>
+							<hr />
+							<Recipe
+							key={results[index].title}
+							name={results[index].title}
+							usedIngredientCount={results[index].usedIngredientCount}
+							usedIngredients={results[index].usedIngredients}
+							missedIngredientCount={results[index].missedIngredientCount}
+							missedIngredients={results[index].missedIngredients}
+							image={results[index].image}
+							/>
+						</div>))}
+						
+						
+					</>
+				);
+			else
 			return (
 				<>
-					<hr />
-					<IngredientsList 
-						usedIngredientCount={results[0].usedIngredientCount}
-						usedIngredients={results[0].usedIngredients}
-					/>
-					{indices.map(index => (<div>
-						<hr />
-						<Recipe
-						key={results[index].title}
-						name={results[index].title}
-						usedIngredientCount={results[index].usedIngredientCount}
-						usedIngredients={results[index].usedIngredients}
-						missedIngredientCount={results[index].missedIngredientCount}
-						missedIngredients={results[index].missedIngredients}
-						image={results[index].image}
-						/>
-					</div>))}
+					<h1>nothing</h1>
 					
 					
 				</>
-			)
+			);
 		}
 	}
 }
@@ -88,14 +105,15 @@ export default class FileForm extends Component {
 			method: 'POST',
 			body: formData
 		};
-
+		
+		console.log('fetch top')
 		fetch('/upload', requestOptions)
 			.then(response => {return response.json()})
-			.then(responseData => {console.log(responseData); return responseData;})
+			.then(responseData => {
+				console.log(responseData);
+				console.log(typeof(responseData)); 
+				return responseData;})
 			.then(mydata => {this.setState({data : mydata, isLoaded : 'true'});})
-			.then(
-				console.log(this.state.data)
-			)
 
 	}
 
