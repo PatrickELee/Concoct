@@ -1,4 +1,5 @@
-# Concocte
+# Concoct
+Built as part of HackDavis 2022.
 
 ## Inspiration
 We wanted to encourage people to cook more to explore their skills, save money on going out to eat, and avoid wasting food in their fridges.
@@ -18,5 +19,5 @@ We have aa working version of the website, which can accurately recognize foods 
 ## What we learned
 This was the first hackathon for all of us so we learned a lot about developing under a short time frame, prioritizing tasks, and debugging for long sessions. We also became a lot more familiar with all the technologies we used.
 
-## What's next for Concocte
+## What's next for Concoct
 We want to continue training the model with more images so it can recognize a wider range of foods, and also provide users a way to sort and filter the recipes for what they really want.
