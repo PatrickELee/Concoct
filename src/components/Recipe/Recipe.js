@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import "./Recipe.css";
-import Spaghetti from "../../spaghetti.jpeg";
 
 export default class Recipe extends Component {
 
@@ -11,7 +10,6 @@ export default class Recipe extends Component {
         console.log(recipe.usedIngredientCount);
         console.log(recipe.usedIngredients[0].amount + " " + recipe.usedIngredients[0].name); */
 
-        // https://bobbyhadz.com/blog/javascript-replace-space-with-dash#:~:text=using%20replace()%20%23-,To%20replace%20the%20spaces%20with%20dashes%20in%20a%20string%2C%20call,is%20replaced%20by%20a%20dash.
         let link = "https://spoonacular.com/recipes/" + 
                     this.props.name.replace(/\s+/g, '-') + '-' + this.props.id;
 
@@ -31,7 +29,7 @@ export default class Recipe extends Component {
                 <h3>{this.props.name}</h3>
                 <div class="recipeGrid">
                     <div>
-                        <img src={this.props.image} />
+                        <img src={this.props.image} alt={this.props.name} />
                     </div>
                     <div>
                         <a href={link}>Link</a>

@@ -10,9 +10,9 @@ function App() {
   return (
     <>
       <h1 class="title">
-        Concote  
+      Concoct  
         <span class="tooltiptext">
-          Concote uses artificial intelligence to recognize ingredients in the photo you upload to give you recipes that you can make.
+          Concoct uses artificial intelligence to recognize ingredients in the photo you upload to give you recipes that you can make.
         </span>
       </h1>
       <div class="bodyContainer">
