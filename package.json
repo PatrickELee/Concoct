@@ -1,6 +1,6 @@
 {
-  "name": "my-app",
-  "homepage": "https://hackdavis2022.herokuapp.com",
+  "name": "concoct",
+  "homepage": "https://concoct-recipe.herokuapp.com",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -42,5 +42,5 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://127.0.0.1:6843/"
+  "proxy": "http://127.0.0.1:5000/"
 }

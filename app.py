@@ -71,4 +71,4 @@ api.add_resource(UploadAPI, '/file/upload')
 
 
 if __name__ == "__main__":
-  app.run(port=6843)
+  app.run()
