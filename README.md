@@ -1,23 +1,52 @@
 # Concoct
-Built as part of HackDavis 2022.
+Concoct is a Flask web app with a React front end that seeks to provide recipes for those with limited ingredients through Microsoft Azure Custom Vision.
 
-## Inspiration
-We wanted to encourage people to cook more to explore their skills, save money on going out to eat, and avoid wasting food in their fridges.
+## Table of contents
+  - [Technologies](#technologies)
+  - [Setup](#setup)
+  - [Development](#development)
+	
+## Technologies
+Project is created with:
+* Python: 3.9.1
+* Flask: 2.1.1
+* React: 18.0.0
+	
+## Setup
+To begin, ensure that you have cloned this repository to your local machine.
 
-## What it does
-Users upload a photo of the ingredients they have on hand, and are given a list of up to four recipes that make use of what is found in their photo. They are provided with a full list of ingredients, and an external link containing more information about the dish.
+```
+$ git clone https://github.com/PatrickELee/Concoct.git
+$ cd Concoct
+```
+For the React part of the app, ensure that you install the project locally with npm:
 
-## How we built it
-We used React, HTML, and CSS for the frontend, and Python and Flask for the backend. We used Microsoft's Azure Custom Vision to recognize objects in the images using machine learning, and the Spoonacular API to find food recipes using the ingredients found in the images. We also trained the model in the Custom Vision by uploading images and tagging them with what they are, so the AI could learn how to recognize food.
+```
+$ npm install
+```
 
-## Challenges we ran into
-We had a lot of trouble with the JSON format used for sending information to and from the APIs. Setting up the environments for backend development also caused a few bugs.
+For the Python portion of the app, while not necessary, it is highly recommended that you use a virtual environemnt to avoid global dependecy issues, as with all projects.
 
-## Accomplishments that we're proud of
-We have aa working version of the website, which can accurately recognize foods and provide a range of dishes to make.
+```
+$ pip install virtualenv
+$ python3 -m venv venv
+$ source venv/scripts/activate
+```
 
-## What we learned
-This was the first hackathon for all of us so we learned a lot about developing under a short time frame, prioritizing tasks, and debugging for long sessions. We also became a lot more familiar with all the technologies we used.
+Download the necessary Python requirements included in the requirements.txt file.
 
-## What's next for Concoct
-We want to continue training the model with more images so it can recognize a wider range of foods, and also provide users a way to sort and filter the recipes for what they really want.
+```
+$ pip install -r requirements.txt
+```
+
+You'll also want to create your own .env file for local testing purposes to store your environment variables.
+
+## Development
+After setup, in order to actually run the project you need to run both the npm and Flask server.
+```
+$ npm start
+```
+Then in a separate terminal, run the following:
+```
+$ flask run
+```
