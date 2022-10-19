@@ -20,6 +20,7 @@ class UploadAPI(Resource):
     endpoint = os.environ.get('ENDPOINT')    
     project_id = os.environ.get('PROJECT_ID')
     spoonacular_api_key = os.environ.get('SPOONACULAR_API_KEY')
+    project_parameter = os.environ.get('PROJECT_PARAMETER')
 
     parse = reqparse.RequestParser()
     parse.add_argument('file', type=werkzeug.datastructures.FileStorage, location='files')
@@ -31,7 +32,7 @@ class UploadAPI(Resource):
     prediction_credentials = ApiKeyCredentials(in_headers={"Prediction-key": prediction_key})
     predictor = CustomVisionPredictionClient(endpoint=endpoint,credentials=prediction_credentials)
     #with open(os.path.join (app.root_path, "uploads", image_file.filename), mode="rb") as test_data:
-    results = predictor.classify_image(project_id, 'Food1', image_file)
+    results = predictor.classify_image(project_id, project_parameter, image_file)
 
     return_data = {'image_includes' : []}
     for prediction in results.predictions:
