@@ -1,5 +1,5 @@
 # Concoct
-Concoct is a Flask web app with a React front end that seeks to provide recipes for those with limited ingredients through Microsoft Azure Custom Vision.
+Concoct is a Flask web app with a React front end that seeks to provide recipes for those with limited ingredients through Microsoft Azure Custom Vision. Users are able to take pictures of the ingredients (e.g. refrigerators, pantries, etc) and submit it to the Concoct web app which will return recipe recommendations based off the Spoonacular API.
 
 ## Table of contents
   - [Technologies](#technologies)
